@@ -205,7 +205,7 @@
 
 <div id="header">
   <h1>archive of archives</h1>
-  <p>Digital Decay and Afterlives took place during the months of April and May in 2026. This archive of archives is composed of 16 computational artists' 3D scanned lyrical artifacts that represent a piece of their own archival findings.</p>
+  <p>Digital Decay and Afterlives took place during the months of April and May in 2026. This archive of archives is composed of <span id="artist-count"></span> computational artists' 3D scanned lyrical artifacts that represent a piece of their own archival findings.</p>
 </div>
 
 <div id="hint">click an object to explore</div>
@@ -259,8 +259,13 @@ const MODELS = [
   { file: 'yan.glb',              label: 'Yan',                description: 'Description', link: '' },
   { file: 'anastasia.glb',        label: 'Anastasia',          description: 'Description', link: '' },
   { file: 'lilly.glb',            label: 'Myer',               description: 'Description', link: 'https://myyyyyer.github.io/404archive/' },
-  { file: 'lilly.glb',            label: 'Eileen',               description: 'Description', link: 'https://www.are.na/eileen-ramos/meaningful-index-cards' }
+  { file: 'lilly.glb',            label: 'Eileen',               description: 'Description', link: 'https://www.are.na/eileen-ramos/meaningful-index-cards' },
+  { file: 'lilly.glb',            label: 'Lily Gabriel',               description: 'Description', link: 'https://www.are.na/lily-gabriel/pazyryk-textiles' }
+
 ];
+
+document.getElementById('artist-count').textContent = MODELS.length;
+
 
 // ── Scene ──
 const scene = new THREE.Scene();
