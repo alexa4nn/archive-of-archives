@@ -243,25 +243,24 @@ import * as CANNON from 'cannon-es';
 // ══════════════════════════════════════════════════════════
 const MODEL_DIR = '3D Scans/';
 const MODELS = [
-  { file: 'kiki_s-book.glb',      label: 'Kiki',               description: 'Description', link: 'https://kiki.directory/archive/lgn' },
-  { file: 'emily-VHS.glb',        label: 'Emily Leach',        description: 'Description', link: 'https://e-dot-leach.github.io/remanence/' },
-  { file: 'lilly.glb',            label: 'Mishka',             description: 'Description', link: 'https://mishkanemes.neocities.org/meditaciones' },
-  { file: 'lipten-sabine.glb',    label: 'Sabine',             description: 'Description', link: 'https://palmsized.statichost.page/' },
-  { file: 'km_radio.glb',         label: 'Kaitlyn',            description: 'Description', link: 'https://tamagoomy.nekoweb.org/enter.html' },
-  { file: 'Addis_S.glb',          label: 'Addis Smith',        description: 'Description', link: '' },
-  { file: 'harvey.glb',           label: 'Harvey Hayes',       description: 'Description', link: '' },
-  { file: 'kasiapluto.glb',       label: 'Kasia Pluto',        description: 'Description', link: 'https://kasiapluto.github.io/my-archive/' },
-  { file: 'Guy_mesh_glb.glb',     label: 'Talia Hamburg',      description: 'Description', link: 'https://taliahamburg.github.io/bags-on-trees/' },
-  { file: 'kendall.glb',          label: 'Kenny Weiss-Close',  description: 'Description', link: 'https://sheherzog.github.io/binladenspritelibrary/index.html' },
-  { file: 'hello_kitty_plush.glb',label: 'Carolina',           description: 'Description', link: 'https://how-to-save-a-life.starstar.website/' },
-  { file: 'BMO_v7.glb',           label: 'Paul',               description: 'Description', link: 'https://paulyshwang.github.io/superzoom-archive/' },
-  { file: 'sofya.glb',            label: 'Sofya',              description: 'Description', link: '' },
-  { file: 'yan.glb',              label: 'Yan',                description: 'Description', link: '' },
-  { file: 'anastasia.glb',        label: 'Anastasia',          description: 'Description', link: '' },
-  { file: 'lilly.glb',            label: 'Myer',               description: 'Description', link: 'https://myyyyyer.github.io/404archive/' },
-  { file: 'lilly.glb',            label: 'Eileen',               description: 'Description', link: 'https://www.are.na/eileen-ramos/meaningful-index-cards' },
-  { file: 'lilly.glb',            label: 'Lily Gabriel',               description: 'Description', link: 'https://www.are.na/lily-gabriel/pazyryk-textiles' }
-
+  { file: 'kiki_s-book.glb',      label: 'Kiki',               description: '', link: 'https://kiki.directory/archive/lgn' },
+  { file: 'emily-VHS.glb',        label: 'Emily Leach',        description: 'Branching pathways to interact with a locked archive of guerilla archivist Marion Stoke\u2019s personal writing hosted on the Internet Archive.\n\nSo grateful & excited to keep thinking about the fragility/preservation/perservation of digital information \u2764', link: 'https://e-dot-leach.github.io/remanence/' },
+  { file: 'lilly.glb',            label: 'Mishka',             description: '(Placeholder 3D Scan, To be Added)', link: 'https://mishkanemes.neocities.org/meditaciones' },
+  { file: 'lipten-sabine.glb',    label: 'Sabine',             description: '', link: 'https://palmsized.statichost.page/' },
+  { file: 'km_radio.glb',         label: 'Kaitlyn',            description: '', link: 'https://tamagoomy.nekoweb.org/enter.html' },
+  { file: 'Addis_S.glb',          label: 'Addis Smith',        description: '', link: '' },
+  { file: 'harvey.glb',           label: 'Harvey Hayes',       description: '', link: '' },
+  { file: 'kasiapluto.glb',       label: 'Kasia Pluto',        description: 'Archive of Speculative memories, Missing data, & recovered images from a Tumblr blog that was active for nearly 10 years. I had SO much fun in the class, I learned SO much\u2014 I\u2019m still processing it all & taking all the new info in, reviewing our notes, reading the readings, reviewing our work. It was such a jam packed 10 weeks!! It was so inspiring to see and work together on our projects. I\u2019m so honored to have been a part of the class with you all!! (and I got to learn how to code)', link: 'https://kasiapluto.github.io/my-archive/' },
+  { file: 'Guy_mesh_glb.glb',     label: 'Talia Hamburg',      description: 'A living archive and open-data visualization mapping 684,000+ New York City trees and tracking the urban phenomenon of trash on trees in the wintertime (mainly). Built with NYC Open Data and community-contributed video documentation, welcoming every pedestrian, citizen, or just a random person to capture this visual sight and contribute to the archive.', link: 'https://taliahamburg.github.io/bags-on-trees/' },
+  { file: 'kendall.glb',          label: 'Kenny Weiss-Close',  description: 'An archive of post 9/11 flash games, meant to archive a specific era of hyperviolence and anti-SWANA bigotry.', link: 'https://sheherzog.github.io/binladenspritelibrary/index.html' },
+  { file: 'hello_kitty_plush.glb',label: 'Carolina',           description: 'How to Save a Life: An exploration and rediscovery of my childhood sense of self through creative expression, seeking to save and commemorate the stage of my life that I do not quite remember.\n\nDigital Decay and Afterlives: Digital archives and physical archives are sisters and computers are inherently human and so are archives and I love to learn. Digital Decay and Afterlives Spring \u201926 forever \u2764', link: 'https://how-to-save-a-life.starstar.website/' },
+  { file: 'BMO_v7.glb',           label: 'Paul',               description: 'A collection of found objects and associated Superzooms (a now-defunct video filter on Instagram) that I took from Jan 2020 \u2013 Apr 2021!\n\nScrolling \u2192 ambience? Ambience, vibes, attention (to digital decay, but also physical decay?). Is this an archive of my attention? Artifacts of my mediated performance of daily life on social media, then making it static/ambient. To archive and to be archived is to be seen, but also to be given agency?', link: 'https://paulyshwang.github.io/superzoom-archive/' },
+  { file: 'sofya.glb',            label: 'Sofya',              description: '', link: '' },
+  { file: 'yan.glb',              label: 'Yan',                description: '', link: '' },
+  { file: 'anastasia.glb',        label: 'Anastasia',          description: '', link: '' },
+  { file: 'meyer_teeth.glb',      label: 'Myer',               description: '', link: 'https://myyyyyer.github.io/404archive/' },
+  { file: 'lilly.glb',            label: 'Eileen',             description: '(Placeholder 3D Scan, To be Added)', link: 'https://www.are.na/eileen-ramos/meaningful-index-cards' },
+  { file: 'lilly.glb',            label: 'Lily Gabriel',       description: '(Placeholder 3D Scan, To be Added)', link: 'https://liga6085.github.io/PazyrykSwan/' },
 ];
 
 document.getElementById('artist-count').textContent = MODELS.length;
